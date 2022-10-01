@@ -1,0 +1,20 @@
+class Solution 
+{
+public:
+    int singleNumber(vector<int>& nums) 
+    {
+         map<int,int> count;
+         for(int x: nums)
+         {
+             count[x]++; //key value pair created
+         }
+         for (auto i : count)
+         {
+             if(i.second==1)// checked
+             {
+                return i.first; 
+             }
+         }
+        return 0;
+    }
+};
